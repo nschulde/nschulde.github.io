@@ -3,17 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Angeln</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @media (min-width: 700px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    a {
+      display: block;
+      margin: 30px auto 0;
+      text-align: center;
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
 
 <h1>🎣 Angeln</h1>
 
-<p>Hier kommen Bilder und Beschreibungen rund ums Angeln.</p>
+<div class="gallery">
+  <img src="assets/images/angeln/a1.jpg" alt="Angeln Bild 1">
+  <img src="assets/images/angeln/a2.jpg" alt="Angeln Bild 2">
+</div>
 
-<img src="assets/images/angeln1.jpg" width="400">
-<p>Beschreibung zum Bild</p>
-
-<p><a href="index.html">⬅ Zurück zur Übersicht</a></p>
+<a href="index.html">⬅ Zurück</a>
 
 </body>
 </html>
