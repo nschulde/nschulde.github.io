@@ -1,3 +1,67 @@
-# Angelsachenbestand
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine Sammlung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: #f5f5f5;
+    }
 
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Meine Bilder</h1>
+
+<div class="grid">
+  <a class="card" href="angeln.html">
+    <h2>🎣 Angeln</h2>
+  </a>
+
+  <a class="card" href="ausruestung.html">
+    <h2>🎒 Standardausrüstung</h2>
+  </a>
+
+  <a class="card" href="rest.html">
+    <h2>📦 Rest</h2>
+  </a>
+</div>
+
+</body>
+</html>
