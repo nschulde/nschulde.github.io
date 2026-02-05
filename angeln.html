@@ -8,8 +8,9 @@
   <style>
     body {
       font-family: system-ui, sans-serif;
-      padding: 20px;
+      padding: 20px 20px 90px;
       background: #f5f5f5;
+      margin: 0;
     }
 
     h1 {
@@ -56,6 +57,7 @@
       width: 100%;
       border-radius: 10px;
       margin-bottom: 10px;
+      cursor: zoom-in;
     }
 
     .content p {
@@ -63,12 +65,40 @@
       font-size: 0.95rem;
     }
 
-    a {
-      display: block;
-      margin-top: 30px;
+    /* 🔍 Vollbild-Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .overlay img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 12px;
+    }
+
+    /* ⬅️ Feste Zurück-Navigation */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #ddd;
+      padding: 12px;
       text-align: center;
+      z-index: 900;
+    }
+
+    .bottom-bar a {
       text-decoration: none;
       font-size: 1.1rem;
+      font-weight: 600;
       color: #0066cc;
     }
   </style>
@@ -93,7 +123,7 @@
   <div class="content">
     <img src="assets/images/angeln/20260123_112808841_iOS.jpg" alt="SHIMANO">
     <p><strong>Länge:</strong> 2,13 m</p>
-    <p><strong>Wurfgewicht:</strong> 7-21g</p>
+    <p><strong>Wurfgewicht:</strong> 7–21g</p>
     <p><strong>Einsatz:</strong> Spinnfischen</p>
     <p><strong>Notizen:</strong> Neu</p>
   </div>
@@ -104,13 +134,38 @@
   <div class="content">
     <img src="assets/images/angeln/20260123_113050295_iOS.jpg" alt="Jigger X">
     <p><strong>Länge:</strong> 2,70 m</p>
-    <p><strong>Wurfgewicht:</strong> 20-60g</p>
+    <p><strong>Wurfgewicht:</strong> 20–60g</p>
     <p><strong>Einsatz:</strong> Spinnfischen</p>
     <p><strong>Notizen:</strong> Gebraucht, noch nicht gekauft</p>
   </div>
 </details>
 
-<a href="index.html">⬅ Zurück zur Übersicht</a>
+<!-- 🔍 Vollbild-Overlay -->
+<div class="overlay" id="overlay">
+  <img id="overlayImg" src="">
+</div>
+
+<!-- ⬅️ Bottom Navigation -->
+<div class="bottom-bar">
+  <a href="index.html">⬅ Zurück zur Übersicht</a>
+</div>
+
+<script>
+  const overlay = document.getElementById("overlay");
+  const overlayImg = document.getElementById("overlayImg");
+
+  document.querySelectorAll(".content img").forEach(img => {
+    img.addEventListener("click", () => {
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    overlayImg.src = "";
+  });
+</script>
 
 </body>
 </html>
