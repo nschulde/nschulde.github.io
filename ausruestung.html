@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Ausruestung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 20px 20px 90px;
+      background: #f5f5f5;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    details {
+      background: white;
+      border-radius: 14px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 18px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "▾";
+      float: right;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      padding: 15px 20px 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: zoom-in;
+    }
+
+    .content p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    /* 🔍 Vollbild-Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .overlay img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 12px;
+    }
+
+    /* ⬅️ Feste Zurück-Navigation */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      z-index: 900;
+    }
+
+    .bottom-bar a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎒 Ausrüstung</h1>
+
+<details>
+  <summary>Angelstuhl</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_111637488_iOS.jpg" alt="Angelstuhl">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Angeltasche</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_115938280_iOS.jpg" alt="Angeltasche">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+  
+<details>
+  <summary>Handtuch</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120001528_iOS.jpg" alt="Handtuch">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Allzweck Box</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120034312_iOS.jpg" alt="Allzweck Box">
+    <p><strong>Inhalt:</strong> Hakenlöser, Klingeln, Wirbel, Stopper, Zange, Gummikugeln, Futterkörbe</p>
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+  
+<details>
+  <summary>Posen Tube</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120053922_iOS.jpg" alt="Posen Box">
+    <p><strong>Inhalt:</strong> Verschiedene Posen</p>
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Haken Tüte 2</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120111028_iOS.jpg" alt="Haken Tüte 2">
+    <p><strong>Inhalt:</strong> Verschiedene Haken, Gebunden, Größe größer als 8 </p>
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Haken Tüte 2</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120103164_iOS.jpg" alt="Haken Tüte 1">
+    <p><strong>Inhalt:</strong> Verschiedene Haken, Gebunden, Größe kleiner als 8 </p>
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Messer</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120119483_iOS.jpg" alt="Messer">
+    <p><strong>Notizen:</strong> Filitiermesser und normales Messer </p>
+  </div>
+</details>
+
+<details>
+  <summary>Fischfutter Gelb</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120127305_iOS.jpg" alt="Fischfutter Gelb">
+    <p><strong>Notizen:</strong> Nur bis zum nächsten Angelausflug verfügbar </p>
+  </div>
+</details>
+
+<details>
+  <summary>Rutenständer</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120135556_iOS.jpg" alt="Rutenständer">
+    <p><strong>Notizen:</strong> Zwei beschissene Ständer </p>
+  </div>
+</details>
+
+<details>
+  <summary>Köder</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120144565_iOS.jpg" alt="Köder">
+    <p><strong>Notizen:</strong> Verschiedene Spinnfischköder </p>
+  </div>
+</details>
+
+<details>
+  <summary>Gewichte 1</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120210018_iOS.jpg" alt="Gewichte 1">
+    <p><strong>Notizen:</strong> Verschiedene Gewichte </p>
+  </div>
+</details>
+
+<details>
+  <summary>Anti-Tangle-Boom</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120216761_iOS.jpg" alt="Anti-Tangle-Boom">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Pellets 1</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120223275_iOS.jpg" alt="Pellets 1">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Gewichte 2</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120234202_iOS.jpg" alt="Gewichte 2">
+    <p><strong>Notizen:</strong> Laufbleie </p>
+  </div>
+</details>
+
+<details>
+  <summary>Teigfutter</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120252801_iOS.jpg" alt="Teigfutter">
+    <p><strong>Notizen:</strong> Grün und Schwarz </p>
+  </div>
+</details>
+
+<details>
+  <summary>Hakenwickler</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120322782_iOS.jpg" alt="Hackenwickler">
+    <p><strong>Notizen:</strong> 3 Stück</p>
+  </div>
+</details>
+
+<details>
+  <summary>Pellets 2</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120300415_iOS.jpg" alt="Pellets 2">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Pellets 3</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120308116_iOS.jpg" alt="Pellets 3">
+    <p><strong>Notizen:</strong> Dose für Würmmer </p>
+  </div>
+</details>
+
+<details>
+  <summary>Angelschein</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120354362_iOS.jpg" alt="Angelschein">
+    <p><strong>Notizen:</strong> Auch Rheinschein </p>
+  </div>
+</details>
+
+<details>
+  <summary>Maßband</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120405507_iOS.jpg" alt="Maßband">
+    <p><strong>Notizen:</strong> Aucht Gewichtmesser</p>
+  </div>
+</details>
+
+<details>
+  <summary>Mülltüten</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120418633_iOS.jpg" alt="Mülltüten">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Rutespitzen Reperaturset</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120427602_iOS.jpg" alt="Rutespitzen Reperaturset">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Erste Hilfe</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120455138_iOS.jpg" alt="Erste Hilfe">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Klemmblei</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120457387_iOS.jpg" alt="Klemmblei">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Angelschnur 1</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120501587_iOS.jpg" alt="Angelschnur 1">
+    <p><strong>Art:</strong> Monofil </p>
+    <p><strong>Dicke:</strong> 0,16mm </p>
+    <p><strong>Gewicht:</strong> 2,31kg </p>
+    <p><strong>Notizen:</strong> Neu, aber Müllton </p>
+  </div>
+</details>
+
+<details>
+  <summary>Spiegel Sonnenbrille</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120510491_iOS.jpg" alt="Spiegel Sonnenbrille">
+    <p><strong>Notizen:</strong> </p>
+  </div>
+</details>
+
+<details>
+  <summary>Angelschnur 2</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120530325_iOS.jpg" alt="Angelschnur 2">
+    <p><strong>Art:</strong> Monofil </p>
+    <p><strong>Dicke:</strong> 0,3mm </p>
+    <p><strong>Gewicht:</strong> 8,8kg </p>
+    <p><strong>Notizen:</strong> Fast leer </p>
+  </div>
+</details>
+
+<details>
+  <summary>Angelschnur 3</summary>
+  <div class="content">
+    <img src="assets/images/ausruestung/20260123_120536142_iOS.jpg" alt="Angelschnur 3">
+    <p><strong>Art:</strong> Geflochten </p>
+    <p><strong>Dicke:</strong> 0,06mm (8x) </p>
+    <p><strong>Gewicht:</strong> 5kg </p>
+    <p><strong>Notizen:</strong> Fast leer </p>
+  </div>
+</details>
+  
+<!-- 🔍 Vollbild-Overlay -->
+<div class="overlay" id="overlay">
+  <img id="overlayImg" src="">
+</div>
+
+<!-- ⬅️ Bottom Navigation -->
+<div class="bottom-bar">
+  <a href="index.html">⬅ Zurück zur Übersicht</a>
+</div>
+
+<script>
+  const overlay = document.getElementById("overlay");
+  const overlayImg = document.getElementById("overlayImg");
+
+  document.querySelectorAll(".content img").forEach(img => {
+    img.addEventListener("click", () => {
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    overlayImg.src = "";
+  });
+</script>
+
+</body>
+</html>
